@@ -68,20 +68,31 @@ export const constantRouterMap = [
       }
     ]
   },
+  // 存续项目详情
   {
     path: '/detail',
     component: Layout,
     hidden: true,
-    meta: {
-      icon: 'tickets',
-      title: '详情'
-    },
     children: [
       {
         path: 'detail',
         name: 'detail',
         component: () => import('@/views/project/subsisting/detail'),
-        meta: {icon: 'warning', title: '详情'}
+        meta: {icon: 'warning', title: '存续项目详情'}
+      }
+    ]
+  },
+  // 项目投资人清单
+  {
+    path: '/investors',
+    component: Layout,
+    hidden: true,
+    children: [
+      {
+        path: 'detail',
+        name: 'detail',
+        component: () => import('@/views/project/subsisting/investors'),
+        meta: {icon: 'warning', title: '项目投资人清单'}
       }
     ]
   },
@@ -138,12 +149,12 @@ export const constantRouterMap = [
           },{
             path: 'payment',
             name: 'payment',
-            component: () => import('@/views/project/payment/index'),
+            component: () => import('@/views/project/subsisting/payment'),
             meta: {icon: 'success', title: '付息'}
           },{
             path: 'principal',
             name: 'principal',
-            component: () => import('@/views/project/principal/index'),
+            component: () => import('@/views/project/subsisting/principal'),
             meta: {icon: 'success', title: '本金'}
           },
         ]

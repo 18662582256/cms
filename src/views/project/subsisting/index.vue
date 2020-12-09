@@ -79,7 +79,7 @@ export default {
   },
   methods:{
     handleEdit(){
-        this.$router.push('/detail')
+        this.$router.push('/detail/detail')
     }
   }
 

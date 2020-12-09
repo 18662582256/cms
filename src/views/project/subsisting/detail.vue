@@ -51,7 +51,7 @@
                 </div>
         </div>
         <ul class="bottom-btn">
-          <li>查看投资人清单</li>
+          <li @click="toInvestors">查看投资人清单</li>
           <li>认购录入</li>
           <li>付息-信息查看/录入</li>
           <li>兑付本金-信息查看/录入</li>
@@ -88,6 +88,12 @@ export default {
           {lable:"投资人年利率：",value:"该项目发行方为...发行交易结构为..."},
 
       ]
+    }
+  },
+  mounted(){},
+  methods:{
+    toInvestors(){
+      this.$router.push('/investors/detail')
     }
   }
 
